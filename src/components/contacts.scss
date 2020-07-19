@@ -1,0 +1,122 @@
+@mixin social-button($url) {
+    color: #333333!important;
+    text-decoration: none;
+    &:before {
+        @include social-icon($url)
+    }
+    @media screen and (max-width: 720px){
+        flex: 1;
+    }
+
+    @media screen and (max-width: 410px) {
+        text-align: center;
+    }
+}
+
+@mixin social-icon($url) {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    display: block;
+    content: ' ';
+    background-image: url($url);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &__social {
+        background-color: #F2F2F2;
+        border-radius: 16px;
+        padding: 10px;
+        display: flex;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            padding: 6px;
+            &:hover {
+                background: #4f4f4f20;
+                border-radius: 20px;
+                border-right-color: #fff;
+            }
+            &:nth-child(1), &:nth-child(2) {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__phone {
+        margin-right: 20px;
+    }
+
+    &__whatsapp {
+        @include social-button("../images/ic_whatsapp.png");
+        border-right: solid 1px #999999;
+    }
+    &__viber {
+        @include social-button("../images/ic_viber.png");
+        border-right: solid 1px #999999;
+    }
+    &__telegram {
+        @include social-button("../images/ic_telegram.png");
+    }
+    // TODO: How should this work?
+    //&__whatsapp, &__viber, &__telegram {
+    //    margin-left: 0;
+    //}
+    //&__telegram {
+    //    padding: 6px 15px 6px 40px;
+    //}
+
+    &__phone-order-complete {
+        display: none;
+    }
+
+    &__phone-number {
+        font-family: 'PT Sans', sans-serif;
+        font-size: 32px;
+        text-decoration: none;
+    }
+
+    &__phone-description {
+        display: none;
+        font-size: 16px;
+        font-family: 'Neucha', fantasy;
+        color: #f2f2f2;
+    }
+}
+
+@media screen and (max-width: 720px){
+    .contacts {
+        order: 4;
+        flex-direction: column;
+        align-items: flex-start;
+        &__social {
+            margin: 15px 0 0 0;
+        }
+
+        &__telegram {
+            
+        }
+        &__phone-payment {
+            //display: none;
+        }
+        &__phone-delivery {
+            //display: none;
+        }
+        &__phone-description {
+            padding-top: 5px;
+            display: flex;
+        }
+        &__phone-number {
+            border-bottom: 1px solid #f2f2f2;
+        }
+    }
+}

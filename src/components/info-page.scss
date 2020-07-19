@@ -1,0 +1,121 @@
+.violet_background {
+    background: #87338B;
+}
+.info-page {
+    background: #87338B;
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+    color: #f2f2f2;
+    a {
+        color: #f2f2f2;
+    }
+    h1, h2 {
+        margin-bottom: 5px;
+    }
+    h1, h2, p {
+        font-family: 'Neucha', fantasy;
+        font-weight: normal;
+    }
+    h1 {
+        font-size: 48px;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    p {
+        font-size: 19px;
+        line-height: 1.2;
+    }
+    .address, .contacts__phone, p {
+        margin-bottom: 12px;
+    }
+    .address {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-family: 'Neucha', fantasy;
+        span {
+            font-size: 18px;
+        }
+        svg {
+            width: 32px;
+            margin-right: 5px;
+        }
+    }
+    .pages-nav{
+        a {
+            font-size: 18px;
+            border-bottom: 1px solid #f2f2f2;
+            margin-right: 15px;
+        }
+    }
+    .contacts__social {
+        margin: 0;
+    }
+    &.desctop {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+        p {
+            max-width: 560px;
+            font-size: 24px;
+        }
+        .info-page__content--block {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-top: 35px;
+        }
+        .info-page__nav {
+            position: absolute;
+            top: 15px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+        }
+        .info-page__content {
+            padding-top: 40px;
+            padding-bottom: 10px;
+        }
+        .contacts__social {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        .pages-nav {
+            padding-bottom: 30px;
+            a {
+                font-size: 24px;
+            }
+        }
+    }
+    &.mobile {
+        .info-page__nav {
+            position: absolute;
+            top: 5px;
+            left: 10px;
+        }
+        .info-page__content {
+            padding: 0 10px;
+            padding-top: 45px;
+            padding-bottom: 10px;
+    
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .address {
+            svg {
+                margin-right: 10px;
+                flex-grow: 2;
+            }
+        }
+    }
+}

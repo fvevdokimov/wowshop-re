@@ -1,0 +1,22 @@
+a.menuTypeBoys{
+    display:flex;
+    margin-left: 10px;
+}
+
+.menuTitleBoys{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menuTitleBoys::before {
+    background-color: #56ccf290;
+    display: block;
+    width: 20px;
+    height: 20px;
+    content: ' ';
+    position: absolute;
+    margin-left: 8px;
+    margin-top: -4px;
+    border-radius: 12px;
+    z-index: -1
+}

@@ -1,0 +1,211 @@
+.menu-mobile__button {
+    background-color: #87338B;
+    border-radius: 80px;
+
+    background-image: url(../images/ic_menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    position: fixed;
+    bottom: -12px;
+    z-index: 3;
+    left: 50vw;
+    margin-left: -36px;
+    box-shadow: 0 0 0 8px #87338B90;
+    transition: left, margin-left 0.2s;
+}
+
+.menu-mobile__button.menu-mobile__button__open {
+    background-color: #EC88AC;
+    box-shadow: 0 0 0 8px #EC88AC90;
+    background-image: url(../images/ic_close.svg);
+}
+
+.menu-mobile__button.menu-mobile__button__left {
+    left: 0;
+    margin-left: -5px;
+}
+
+.menu-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 128px;
+    width: 100%;
+    position: fixed;
+    bottom: -150vw;
+    z-index: 1;
+}
+
+.menu-mobile.menu-mobile__left:before {
+    margin-left: -30vw;
+    margin-top: -25vw;
+}
+
+@media screen and (min-width: 481px){
+    .menu-mobile__button {
+        display: none;
+    }
+    .menu-mobile {
+        display: none;
+    }
+}
+
+.menu-mobile > * {
+    z-index: 2;
+    animation: menu__items-disappear 0.95s forwards;
+}
+
+.menu-mobile.menu-mobile__open > * {
+    animation: menu__items-appear 0.95s forwards;
+}
+
+.menu-mobile:before {
+    display: block;
+    content: ' ';
+    animation: menu__background-hide 0.65s forwards;
+    background-color: #87338B;
+    border-radius: 200vw;
+    position: absolute;
+    z-index: 1;
+    margin-top: -24px;
+}
+.menu-mobile.menu-mobile__open:before {
+    animation: menu__background-expand 0.65s forwards;
+}
+
+@keyframes menu__items-appear {
+    0% {
+        height: 0;
+    }
+    60% {
+        height: unset;
+        transform: translateY(-80vw);
+    }
+    100% {
+        transform: translateY(-200vw);
+        opacity: 1;
+    }
+}
+
+@keyframes menu__items-disappear {
+    0% {
+        transform: translateY(-200vw);
+    }
+    60% {
+        height: unset;
+        transform: translateY(-80vw);
+    }
+    100% {
+        height: 0;
+    }
+}
+
+@keyframes menu__background-expand {
+    0% {
+        min-width: 0;
+        height: 0;
+        box-shadow: 0 0 0 0 #87338B90;
+    }
+    100% {
+        min-width: 200vw;
+        height: 200vw;
+        box-shadow: 0 0 0 96px #87338B90;
+        transform: translateY(-200vw);
+    }
+}
+
+@keyframes menu__background-hide {
+    0% {
+        min-width: 200vw;
+        height: 200vw;
+        box-shadow: 0 0 0 96px #87338B90;
+        transform: translateY(-200vw);
+    }
+    100% {
+        min-width: 0;
+        height: 0;
+        box-shadow: 0 0 0 0 #87338B90;
+    }
+}
+
+.menu-mobile__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-mobile__nav__link, a:link.menu-mobile__nav__link , a:visited.menu-mobile__nav__link{
+    color: #f2f2f2;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.menu-mobile__nav-catalog {
+    display: flex;
+    flex-direction: row;
+    margin-top: 12px;
+}
+
+.menu-mobile__nav-catalog__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-mobile__nav-catalog__links a:link, .menu-mobile__nav-catalog__links a:visited {
+    color: #f2f2f2;
+    font-size: 24px;
+}
+
+.menu-mobile__nav-catalog__links > a {
+    margin-top: 12px;
+}
+
+
+.menu-mobile__boys a {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.menu-mobile__boys::before {
+    background-color: #56ccf2;
+    display: block;
+    width: 30px;
+    height: 30px;
+    content: ' ';
+    position: absolute;
+    margin-left: 24px;
+    margin-top: -12px;
+    border-radius: 20px;
+    z-index: -1
+}
+
+.menu-mobile__girls a{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.menu-mobile__girls::before {
+    background-color: #ec88ac;
+    display: block;
+    width: 30px;
+    height: 30px;
+    content: ' ';
+    position: absolute;
+    margin-left: 64px;
+    margin-top: 8px;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.menu-mobile__nav-catalog__delim {
+    width: 1px;
+    background-color: #f2f2f2;
+    margin-left: 42px;
+    margin-right: 42px;
+}

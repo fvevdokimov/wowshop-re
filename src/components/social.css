@@ -1,0 +1,35 @@
+.social__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333333;
+    font-family: 'Neucha', fantasy;
+    font-size: 18px;
+    padding: 0 10px;
+}
+.follow {
+    display: flex;
+    align-items: center;
+}
+
+
+
+@media screen and (max-width: 650px) {
+    .social__row {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 10px;
+        scroll-snap-align: center;
+    }
+    .follow {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .social__description {
+        flex-basis: 100%;
+        text-align: center;
+        color: #87338B;
+    }
+    
+}

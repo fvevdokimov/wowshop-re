@@ -1,0 +1,96 @@
+
+.wholeBlock{
+    margin: 64px auto auto;
+    font-family: 'Neucha', fantasy;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    color: #87338B;
+}
+.underHeader{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 24px;
+    line-height: 130%;
+    text-align: center;
+    color: #333333;
+}
+.phoneOrEmail{
+    display: flex;
+    padding-bottom: 15px;
+}
+.or{
+    display: block;
+    font-size: 48px;
+    line-height: 50px;
+    text-align: center;
+    color: #87338B;
+    margin: 20px;
+}
+.button{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+    line-height: 120%;
+    font-weight: bold;
+}
+.agree{
+    padding-top: 15px;
+    display: block;
+    max-width: 350px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #333333;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+}
+
+@media screen and (max-width: 650px) {
+    .wholeBlock {
+        margin-top: 40px;
+        width: 100%;
+        padding: 18px;
+        scroll-snap-align: center;
+    }
+    .header {
+        font-size: 36px;
+    }
+    
+    .underHeader {
+        font-size: 18px;
+    }
+    .or {
+        font-size: 24px;
+        margin: 20px 8px 8px;
+    }
+    .mobile-break {
+        display: block;
+        height: 0;
+        flex-basis: 100%;
+    }
+
+    .phoneOrEmail {
+        flex-wrap: wrap;
+    }
+
+    .phoneOrEmail > label{
+        flex: 1;
+    }
+    .phoneOrEmail > label:nth-of-type(2) {
+        flex-basis: 100%;
+    }
+}

@@ -1,0 +1,122 @@
+
+.carousel.carousel-small {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.carousel-small .carousel-slide{
+    min-width: 100%;
+    min-height: 282px;
+}
+
+.carouselContainer {
+    width: 410px;
+    margin-right: 30px;
+}
+
+.carousel {
+    font-family: sans-serif;
+    scroll-snap-type: x mandatory;
+    overflow-y: hidden;
+    display: flex;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: scroll;
+    width: 410px;
+    scrollbar-width: none;
+    align-items: center;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-slide {
+    min-width: 410px;
+    min-height: 410px;
+    scroll-snap-align: start;
+    text-align: center;
+    position: relative;
+}
+
+.carousel-thumbnails {
+    display: flex;
+    width: 410px;
+}
+
+.carousel-thumbnail {
+    width: 126px;
+    height: 126px;
+    margin-right: 16px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.carouselButtonContainer {
+    width: inherit;
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+.carouselLeft {
+    width: 12px;
+    height: 24px;
+    padding: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='9' height='15' viewBox='0 0 9 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.74219 1.16907L1.74219 7.16907L7.74219 13.1691' stroke='%23EC88AC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: 12px 24px;
+    background-position-x: 14px;
+    background-position-y: 12px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.carouselSpacer {
+    flex: 1;
+}
+
+.carouselRight {
+    width: 12px;
+    height: 24px;
+    padding: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='9' height='15' viewBox='0 0 9 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.74219 13.1691L7.74219 7.16907L1.74219 1.16907' stroke='%23EC88AC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: 12px 24px;
+    background-position-x: 14px;
+    background-position-y: 12px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.carousel.carousel-small .carouselButtonContainer {
+    display: none;
+}
+.carousel:hover.carousel-small .carouselButtonContainer {
+    display: flex;
+}
+
+@media screen and (max-width: 650px) {
+    .carousel, .carousel.carousel-small {
+        width: 100vw;
+        height: 100vw;
+        border-radius: 0;
+    }
+    .carouselContainer {
+        width: 100%;
+        margin-right: 0;
+    }
+    .carousel .carousel-slide, .carousel-small .carousel-slide{
+        min-width: 100vw;
+        min-height: 100vw;
+    }
+    .carousel.carousel-small .carouselButtonContainer {
+        display: flex;
+    }
+    html[data-is-cart-open='true'] .carousel.carousel-small .carouselButtonContainer,
+    html[data-is-item-open='true'] .carousel.carousel-small .carouselButtonContainer {
+        display: none;
+    }
+    .carousel-thumbnails {
+        display: none;
+    }
+}

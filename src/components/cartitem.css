@@ -1,0 +1,47 @@
+.cart-item {
+    margin-left: 0;
+}
+
+.cart-item__header a {
+    text-decoration: none;
+}
+
+.cart-item__header a:hover {
+    text-decoration: underline;
+}
+
+.cart-item__header {
+    font-size: 24px;
+    font-family: 'Neucha', fantasy;
+    text-decoration: none;
+    margin-bottom: 12px;
+    color: #87338B;
+}
+
+.cart-item__total {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.checkout-item__total {
+    margin-left: auto;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.cart-item__controls-row {
+    display: flex;
+}
+
+.cart-item__controls-row > span {
+    margin-right: 20px;
+}
+
+.select {
+    background: url("../images/ic_select_tick.svg") no-repeat right center;
+    appearance: none;
+    padding: 0 10px 0 0;
+    border: 0;
+    border-radius: 0;
+    color: #87338B;
+}

@@ -1,0 +1,27 @@
+
+.primary-button {
+    font-family: 'PT Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 180%;
+    color: #F2F2F2;
+    border-radius: 40px;
+    background-color: #87338B;
+    border: rgb(185, 124, 196) solid 12px;
+    display: flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+    &:hover {
+        border-color: rgba(#fff, .25);
+    }
+}
+
+.primary-button.disabled {
+    pointer-events: none;
+    cursor: unset;
+    opacity: 0.7;
+}

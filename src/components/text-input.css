@@ -1,0 +1,92 @@
+.input {
+    position: relative;
+    display: inline-block;
+    padding-top: 6px;
+    margin-top: 12px;
+    font-family: 'Neucha', fantasy;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+.input > span {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.input > input {
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid rgb(135, 51, 139);
+    border-top-color: transparent;
+    border-radius: 20px;
+    padding: 10px 13px 10px;
+    width: 100%;
+    height: inherit;
+    color: rgba(0, 0, 0, 0.87);
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 24px;
+    line-height: inherit;
+    transition: border, opacity 0.2s;
+}
+
+.input > input:not(:focus):placeholder-shown {
+    border-top-color: rgb(135, 51, 139);
+}
+
+.input > input:not(:focus):placeholder-shown + span {
+    font-size: 24px;
+    line-height: 70px;
+    color: rgba(0,0,0,0.6);
+}
+
+.input > input:not(:focus):placeholder-shown + span::before,
+.input > input:not(:focus):placeholder-shown + span::after {
+    border-top-color: transparent;
+}
+
+.input > span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    border-color: rgb(135, 51, 139);
+    width: 100%;
+    max-height: 100%;
+    color: rgb(135, 51, 139);
+    font-size: 75%;
+    line-height: 15px;
+    cursor: text;
+    transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+}
+
+.input > span::before,
+.input > span::after {
+    content: ' ';
+    display: block;
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-right: 4px;
+    border-top: solid 1px;
+    border-top-color: rgb(135, 51, 139);
+    min-width: 10px;
+    height: 10px;
+    transition: border-color 0.2s;
+    pointer-events: none;
+}
+
+.input > span::before {
+    margin-right: 4px;
+    border-radius: 20px 0;
+    margin-left: 4px;
+}
+
+.input > span::after {
+    flex-grow: 1;
+    margin-left: 4px;
+    border-radius: 0 20px;
+}
+
+.input.input-faded > input:not(:focus), .input.input-faded > input:not(:focus) + span{
+    opacity: 0.25;
+}
